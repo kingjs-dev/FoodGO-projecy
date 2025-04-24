@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FoodGo | Comida Rápida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>FoodGo</h1>
+    <p>Peça sua comida favorita em segundos!</p>
+    <nav>
+      <ul>
+        <li><a href="#comidas">Comidas</a></li>
+        <li><a href="#bebidas">Bebidas</a></li>
+        <li><a href="#sobremesas">Sobremesas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="comidas" class="cardapio">
+      <h2>Comidas</h2>
+      <div class="itens">
+        <div class="item">
+          <img src="imagens/hamburguer.jpg" alt="Hambúrguer">
+          <h3>Hambúrguer Clássico</h3>
+          <p>Delicioso hambúrguer artesanal com queijo.</p>
+          <span>R$ 19,90</span>
+          <button onclick="adicionarCarrinho('Hambúrguer Clássico', 19.9)">Adicionar</button>
+        </div>
+        <div class="item">
+          <img src="imagens/pizza.jpg" alt="Pizza">
+          <h3>Pizza Marguerita</h3>
+          <p>Pizza tradicional com molho de tomate e manjericão.</p>
+          <span>R$ 29,90</span>
+          <button onclick="adicionarCarrinho('Pizza Marguerita', 29.9)">Adicionar</button>
+        </div>
+        <div class="item">
+          <img src="imagens/hotdog.jpg" alt="Hot Dog">
+          <h3>Hot Dog</h3>
+          <p>O tradicional cachorro-quente com salsicha e molho especial.</p>
+          <span>R$ 15,90</span>
+          <button onclick="adicionarCarrinho('Hot Dog', 15.9)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="bebidas" class="cardapio">
+      <h2>Bebidas</h2>
+      <div class="itens">
+        <div class="item">
+          <img src="imagens/coca_cola.jpg" alt="Refrigerante">
+          <h3>Refrigerante</h3>
+          <p>Escolha entre cola, laranja ou guaraná.</p>
+          <span>R$ 7,90</span>
+          <button onclick="adicionarCarrinho('Refrigerante', 7.9)">Adicionar</button>
+        </div>
+        <div class="item">
+          <img src="imagens/suco_laranja.jpg" alt="Suco Natural">
+          <h3>Suco Natural</h3>
+          <p>Suco de laranja fresquinho e natural.</p>
+          <span>R$ 6,50</span>
+          <button onclick="adicionarCarrinho('Suco Natural', 6.5)">Adicionar</button>
+        </div>
+        <div class="item">
+          <img src="imagens/agua_mineral.jpg" alt="Água">
+          <h3>Água Mineral</h3>
+          <p>Água fresca para acompanhar sua refeição.</p>
+          <span>R$ 3,00</span>
+          <button onclick="adicionarCarrinho('Água Mineral', 3)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobremesas" class="cardapio">
+      <h2>Sobremesas</h2>
+      <div class="itens">
+        <div class="item">
+          <img src="imagens/bolo_chocolate.jpg" alt="Bolo de Chocolate">
+          <h3>Bolo de Chocolate</h3>
+          <p>Delicioso bolo de chocolate com recheio cremoso.</p>
+          <span>R$ 12,90</span>
+          <button onclick="adicionarCarrinho('Bolo de Chocolate', 12.9)">Adicionar</button>
+        </div>
+        <div class="item">
+          <img src="imagens/sorvete.jpg" alt="Sorvete">
+          <h3>Sorvete</h3>
+          <p>Sorvete de morango, chocolate ou baunilha.</p>
+          <span>R$ 8,00</span>
+          <button onclick="adicionarCarrinho('Sorvete', 8)">Adicionar</button>
+        </div>
+        <div class="item">
+          <img src="imagens/pudim.jpg" alt="Pudim">
+          <h3>Pudim</h3>
+          <p>Pudim de leite condensado, super cremoso.</p>
+          <span>R$ 7,50</span>
+          <button onclick="adicionarCarrinho('Pudim', 7.5)">Adicionar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="carrinho">
+      <h2>Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+      <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+      <button onclick="finalizarPedido()">Finalizar Pedido</button>
+      <button onclick="limparCarrinho()">Limpar Carrinho</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 FoodGo | Site fictício para portfólio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
